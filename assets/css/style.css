@@ -610,6 +610,11 @@ section {
     color: #666;
 }
 
+#location .section-title p:not(.lead) {
+    font-style: normal;
+    line-height: 1.6;
+}
+
 .about .section-title2 p {
     text-align: left;
     font-style: italic;
