@@ -144,7 +144,7 @@
 
   document.querySelectorAll(".carousel").forEach((carousel) => {
     carousel.addEventListener("slid.bs.carousel", function () {
-      this.querySelectorAll("h2").forEach((item) => item.classList.add("animated", "fadeInDown"));
+      this.querySelectorAll(".hero-title").forEach((item) => item.classList.add("animated", "fadeInDown"));
       this.querySelectorAll("p, .btn-get-started").forEach((item) => item.classList.add("animated", "fadeInUp"));
     });
   });

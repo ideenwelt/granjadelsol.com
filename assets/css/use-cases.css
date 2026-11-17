@@ -74,6 +74,7 @@
     font-size: 2rem;
 }
 
+.use-case-card h2,
 .use-case-card h3,
 .use-case-card h4 {
     color: #111;
