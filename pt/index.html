@@ -82,7 +82,34 @@
           "name": "Venda de toda a propriedade Granja del Sol",
           "itemOffered": {
             "@id": "https://granjadelsol.com/#property"
-          }
+          },
+          "description": "Três preços fixos alternativos pela propriedade inteira.",
+          "priceSpecification": [
+            {
+              "@type": "UnitPriceSpecification",
+              "@id": "https://granjadelsol.com/#price-eur",
+              "name": "Preço fixo de compra integral em EUR",
+              "priceType": "Alternative fixed full purchase price",
+              "price": 200000,
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "UnitPriceSpecification",
+              "@id": "https://granjadelsol.com/#price-usd",
+              "name": "Preço fixo de compra integral em USD",
+              "priceType": "Alternative fixed full purchase price",
+              "price": 232000,
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "UnitPriceSpecification",
+              "@id": "https://granjadelsol.com/#price-pyg",
+              "name": "Preço fixo de compra integral em PYG",
+              "priceType": "Alternative fixed full purchase price",
+              "price": 1400000000,
+              "priceCurrency": "PYG"
+            }
+          ]
         }
       ]
     }

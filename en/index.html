@@ -21,8 +21,7 @@
     <meta
         content="property in Paraguay, home in Paraguay, real estate Paraguay, 49 acre property, 20 hectare property, rural property Paraguay, self-sufficient living Paraguay, Granja del Sol, Ybytyruzu Mountains, agritourism Paraguay"
         name="keywords" />
-    <!-- JSON-LD: Gemeinsame IDs und Objektdaten in de/en/es/pt synchron halten.
-         Preisfelder erst ergänzen, wenn verbindliche Währung und Referenzumrechnungen bestätigt sind. -->
+    <!-- JSON-LD: Gemeinsame IDs und Objektdaten in de/en/es/pt synchron halten. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -86,7 +85,34 @@
           "name": "Sale of the entire Granja del Sol property",
           "itemOffered": {
             "@id": "https://granjadelsol.com/#property"
-          }
+          },
+          "description": "Three alternative fixed prices for the entire property.",
+          "priceSpecification": [
+            {
+              "@type": "UnitPriceSpecification",
+              "@id": "https://granjadelsol.com/#price-eur",
+              "name": "Full fixed purchase price in EUR",
+              "priceType": "Alternative fixed full purchase price",
+              "price": 200000,
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "UnitPriceSpecification",
+              "@id": "https://granjadelsol.com/#price-usd",
+              "name": "Full fixed purchase price in USD",
+              "priceType": "Alternative fixed full purchase price",
+              "price": 232000,
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "UnitPriceSpecification",
+              "@id": "https://granjadelsol.com/#price-pyg",
+              "name": "Full fixed purchase price in PYG",
+              "priceType": "Alternative fixed full purchase price",
+              "price": 1400000000,
+              "priceCurrency": "PYG"
+            }
+          ]
         }
       ]
     }

@@ -20,8 +20,7 @@
         content="Grundstück in Paraguay, Haus in Paraguay, Immobilien in Paraguay, Investitionen in Südamerika,
     Selbstversorger Grundstück, nachhaltiges Leben Paraguay, ländliches Wohnen Südamerika, Granja del Sol, 20 Hektar Grundstück, Ybytyruzu-Gebirge, Permakultur Paraguay, Agrotourismus Paraguay"
         name="keywords" />
-    <!-- JSON-LD: Gemeinsame IDs und Objektdaten in de/en/es/pt synchron halten.
-         Preisfelder erst ergänzen, wenn verbindliche Währung und Referenzumrechnungen bestätigt sind. -->
+    <!-- JSON-LD: Gemeinsame IDs und Objektdaten in de/en/es/pt synchron halten. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -85,7 +84,34 @@
           "name": "Verkauf des gesamten Anwesens Granja del Sol",
           "itemOffered": {
             "@id": "https://granjadelsol.com/#property"
-          }
+          },
+          "description": "Drei alternative Festpreise für das gesamte Anwesen.",
+          "priceSpecification": [
+            {
+              "@type": "UnitPriceSpecification",
+              "@id": "https://granjadelsol.com/#price-eur",
+              "name": "Vollständiger Festpreis in EUR",
+              "priceType": "Alternative fixed full purchase price",
+              "price": 200000,
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "UnitPriceSpecification",
+              "@id": "https://granjadelsol.com/#price-usd",
+              "name": "Vollständiger Festpreis in USD",
+              "priceType": "Alternative fixed full purchase price",
+              "price": 232000,
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "UnitPriceSpecification",
+              "@id": "https://granjadelsol.com/#price-pyg",
+              "name": "Vollständiger Festpreis in PYG",
+              "priceType": "Alternative fixed full purchase price",
+              "price": 1400000000,
+              "priceCurrency": "PYG"
+            }
+          ]
         }
       ]
     }

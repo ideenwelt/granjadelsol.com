@@ -20,8 +20,7 @@
     <meta
         content="terreno en Paraguay, casa en Paraguay, propiedad en Paraguay, inversión en Sudamérica, autosuficiencia Paraguay, vida rural Paraguay, Granja del Sol, 20 hectáreas, cordillera del Ybytyruzú, agricultura Paraguay, agroturismo Paraguay"
         name="keywords" />
-    <!-- JSON-LD: Gemeinsame IDs und Objektdaten in de/en/es/pt synchron halten.
-         Preisfelder erst ergänzen, wenn verbindliche Währung und Referenzumrechnungen bestätigt sind. -->
+    <!-- JSON-LD: Gemeinsame IDs und Objektdaten in de/en/es/pt synchron halten. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -85,7 +84,34 @@
           "name": "Venta de toda la propiedad Granja del Sol",
           "itemOffered": {
             "@id": "https://granjadelsol.com/#property"
-          }
+          },
+          "description": "Tres precios fijos alternativos por la totalidad de la propiedad.",
+          "priceSpecification": [
+            {
+              "@type": "UnitPriceSpecification",
+              "@id": "https://granjadelsol.com/#price-eur",
+              "name": "Precio fijo de compra completo en EUR",
+              "priceType": "Alternative fixed full purchase price",
+              "price": 200000,
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "UnitPriceSpecification",
+              "@id": "https://granjadelsol.com/#price-usd",
+              "name": "Precio fijo de compra completo en USD",
+              "priceType": "Alternative fixed full purchase price",
+              "price": 232000,
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "UnitPriceSpecification",
+              "@id": "https://granjadelsol.com/#price-pyg",
+              "name": "Precio fijo de compra completo en PYG",
+              "priceType": "Alternative fixed full purchase price",
+              "price": 1400000000,
+              "priceCurrency": "PYG"
+            }
+          ]
         }
       ]
     }
