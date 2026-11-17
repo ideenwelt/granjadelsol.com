@@ -21,6 +21,76 @@
     <meta
         content="property in Paraguay, home in Paraguay, real estate Paraguay, 49 acre property, 20 hectare property, rural property Paraguay, self-sufficient living Paraguay, Granja del Sol, Ybytyruzu Mountains, agritourism Paraguay"
         name="keywords" />
+    <!-- JSON-LD: Gemeinsame IDs und Objektdaten in de/en/es/pt synchron halten.
+         Preisfelder erst ergänzen, wenn verbindliche Währung und Referenzumrechnungen bestätigt sind. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "RealEstateListing",
+          "@id": "https://granjadelsol.com/en/#listing",
+          "url": "https://granjadelsol.com/en/",
+          "name": "49 Acres with a Home South of Independencia, Paraguay | Granja del Sol",
+          "description": "Home with 20 hectares (49 acres) near José Fassardi, Paraguay: rural peace, about 35 minutes by car from Planta Urbana (Independencia).",
+          "inLanguage": "en-US",
+          "mainEntity": {
+            "@id": "https://granjadelsol.com/#property"
+          },
+          "offers": {
+            "@id": "https://granjadelsol.com/#offer"
+          }
+        },
+        {
+          "@type": [
+            "Place",
+            "Product"
+          ],
+          "@id": "https://granjadelsol.com/#property",
+          "name": "Granja del Sol",
+          "description": "Property with 20 hectares of land and an existing home near José Fassardi, Guairá Department, Paraguay.",
+          "image": "https://granjadelsol.com/assets/img/Grundstueck_alle/Grundstueck.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "José Fassardi",
+            "addressRegion": "Guairá",
+            "addressCountry": "PY"
+          },
+          "additionalProperty": {
+            "@type": "PropertyValue",
+            "name": "Land area",
+            "value": 20,
+            "unitText": "ha"
+          },
+          "containsPlace": {
+            "@id": "https://granjadelsol.com/#house"
+          }
+        },
+        {
+          "@type": "House",
+          "@id": "https://granjadelsol.com/#house",
+          "name": "Granja del Sol home",
+          "description": "Existing home, completed in April 2024 and currently occupied. 100 m² of interior living space; approximately 280 m² in total, including covered outdoor areas. A 3-meter-wide covered terrace wraps around the building.",
+          "image": "https://granjadelsol.com/assets/img/house/wohnhaus-terrasse.webp",
+          "yearBuilt": 2024,
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "name": "Interior living space",
+            "value": 100,
+            "unitCode": "MTK"
+          }
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://granjadelsol.com/#offer",
+          "name": "Sale of the entire Granja del Sol property",
+          "itemOffered": {
+            "@id": "https://granjadelsol.com/#property"
+          }
+        }
+      ]
+    }
+    </script>
     <!-- Open Graph Meta Tags -->
     <meta content="49 Acres with a Home South of Independencia | Granja del Sol" property="og:title" />
     <meta

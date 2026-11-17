@@ -20,6 +20,76 @@
     <meta
         content="terreno en Paraguay, casa en Paraguay, propiedad en Paraguay, inversión en Sudamérica, autosuficiencia Paraguay, vida rural Paraguay, Granja del Sol, 20 hectáreas, cordillera del Ybytyruzú, agricultura Paraguay, agroturismo Paraguay"
         name="keywords" />
+    <!-- JSON-LD: Gemeinsame IDs und Objektdaten in de/en/es/pt synchron halten.
+         Preisfelder erst ergänzen, wenn verbindliche Währung und Referenzumrechnungen bestätigt sind. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "RealEstateListing",
+          "@id": "https://granjadelsol.com/es/#listing",
+          "url": "https://granjadelsol.com/es/",
+          "name": "20 ha con casa al sur de Independencia, Paraguay | Granja del Sol",
+          "description": "Propiedad de 20 hectáreas con casa cerca de José Fassardi, Paraguay: tranquilidad rural, a unos 35 minutos en auto de Planta Urbana (Independencia).",
+          "inLanguage": "es",
+          "mainEntity": {
+            "@id": "https://granjadelsol.com/#property"
+          },
+          "offers": {
+            "@id": "https://granjadelsol.com/#offer"
+          }
+        },
+        {
+          "@type": [
+            "Place",
+            "Product"
+          ],
+          "@id": "https://granjadelsol.com/#property",
+          "name": "Granja del Sol",
+          "description": "Propiedad con 20 hectáreas de terreno y una casa existente cerca de José Fassardi, departamento de Guairá, Paraguay.",
+          "image": "https://granjadelsol.com/assets/img/Grundstueck_alle/Grundstueck.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "José Fassardi",
+            "addressRegion": "Guairá",
+            "addressCountry": "PY"
+          },
+          "additionalProperty": {
+            "@type": "PropertyValue",
+            "name": "Superficie del terreno",
+            "value": 20,
+            "unitText": "ha"
+          },
+          "containsPlace": {
+            "@id": "https://granjadelsol.com/#house"
+          }
+        },
+        {
+          "@type": "House",
+          "@id": "https://granjadelsol.com/#house",
+          "name": "Casa de la Granja del Sol",
+          "description": "Casa existente, terminada en abril de 2024 y actualmente habitada. 100 m² de superficie habitable interior; aproximadamente 280 m² de superficie total, incluidas las áreas exteriores. Una galería de 3 metros de ancho rodea toda la casa.",
+          "image": "https://granjadelsol.com/assets/img/house/wohnhaus-terrasse.webp",
+          "yearBuilt": 2024,
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "name": "Superficie habitable interior",
+            "value": 100,
+            "unitCode": "MTK"
+          }
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://granjadelsol.com/#offer",
+          "name": "Venta de toda la propiedad Granja del Sol",
+          "itemOffered": {
+            "@id": "https://granjadelsol.com/#property"
+          }
+        }
+      ]
+    }
+    </script>
     <!-- Open Graph Meta Tags -->
     <meta content="20 ha con casa al sur de Independencia | Granja del Sol" property="og:title" />
     <meta
