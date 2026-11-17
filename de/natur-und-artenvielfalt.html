@@ -32,29 +32,62 @@
     <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
     <script defer src="https://cloud.umami.is/script.js"
         data-website-id="4964bf27-c2f3-4cb7-9a11-6171bdb02b49"></script>
+    <noscript>
+        <style>
+            @media (max-width: 991px) {
+                #header.use-case-header { height: auto; position: static; }
+                .use-case-header > .container { flex-wrap: wrap; }
+                .use-case-menu { width: 100%; }
+                .use-case-menu > ul {
+                    display: flex; flex-wrap: wrap; position: static;
+                    padding: 0; overflow: visible; box-shadow: none;
+                }
+                .use-case-menu .mobile-nav-toggle { display: none; }
+            }
+        </style>
+    </noscript>
 </head>
 <body>
-    <header id="header">
+    <header class="use-case-header" id="header">
         <div class="container d-flex align-items-center justify-content-between">
             <div class="logo"><a class="brand-name" href="./"><span>Granja del Sol</span></a></div>
-            <nav class="navmenu" id="navmenu">
-                <ul>
+            <nav class="navmenu use-case-menu" id="navmenu" aria-label="Hauptnavigation">
+                <ul id="theme-menu">
+                    <li class="dropdown">
+                        <details class="language-switch">
+                            <summary><span><i class="bi bi-translate" aria-hidden="true"></i> Sprache</span><i class="bi bi-chevron-down" aria-hidden="true"></i></summary>
+                            <ul>
+                                <li><a href="/de/natur-und-artenvielfalt.html" lang="de" aria-current="page">Deutsch <i class="bi bi-check2" aria-hidden="true"></i></a></li>
+                                <li><a href="/en/nature-and-biodiversity.html" lang="en-US">English</a></li>
+                                <li><a href="/es/naturaleza-y-biodiversidad.html" lang="es">Español</a></li>
+                                <li><a href="/pt/natureza-e-biodiversidade.html" lang="pt-BR">Português</a></li>
+                            </ul>
+                        </details>
+                    </li>
                     <li><a href="./">Zum Exposé</a></li>
                     <li><a href="familienleben.html">Familien</a></li>
                     <li><a href="investition-und-entwicklung.html">Investition</a></li>
                     <li><a href="selbstversorgung.html">Selbstversorgung</a></li>
                 </ul>
-                <i aria-label="Navigation öffnen" class="mobile-nav-toggle d-lg-none bi bi-list"></i>
+                <button type="button" aria-label="Navigation öffnen" aria-controls="theme-menu" aria-expanded="false" class="mobile-nav-toggle d-lg-none bi bi-list"></button>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="use-case-hero" style="background-image: url('../assets/img/Grundstueck_alle/Grundstueck.webp');">
+        <section class="use-case-hero use-case-hero-with-context" style="background-image: url('../assets/img/Grundstueck_alle/Grundstueck.webp');">
             <div class="container">
                 <span class="use-case-kicker">Natur auf der Granja del Sol</span>
                 <h1>Ein Grundstück, das auch Lebensraum ist</h1>
                 <p>Zwischen Wohnbereich, Weiden, den beiden Bachläufen, dem Río Pirapó und rund zwölf Hektar Wald- und Forstflächen begegnen uns regelmäßig wild lebende Tiere und eine vielfältige Pflanzenwelt. Sie gehören hier ganz selbstverständlich zum Alltag auf dem Grundstück.</p>
+                <div class="use-case-hero-context mt-3 pt-3">
+                    <p>20 Hektar mit Wohnhaus bei José Fassardi, Region Independencia – zum Verkauf.</p>
+                    <ul class="list-unstyled d-flex flex-wrap gap-3 mt-1 mb-0">
+                        <li><a href="/de/" aria-label="Vollständiges Exposé">Exposé</a></li>
+                        <li><a href="/de/#price">Kaufpreis</a></li>
+                        <li><a href="/de/#contact">Kontakt</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -375,5 +408,54 @@
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendor/aos/aos.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+        (function () {
+            const menu=document.querySelector(".use-case-menu");
+            const toggle=menu.querySelector(".mobile-nav-toggle");
+            const languages=menu.querySelector(".language-switch");
+
+            // Keep the native button's accessible state in sync with the existing menu.
+            function syncMenuState() {
+                const expanded=document.body.classList.contains("mobile-nav-active");
+                toggle.setAttribute("aria-expanded", String(expanded));
+                toggle.setAttribute("aria-label", expanded? "Navigation schließen":"Navigation öffnen");
+                if(!expanded) languages.open=false;
+            }
+            new MutationObserver(syncMenuState).observe(document.body, {attributes: true, attributeFilter: ["class"]});
+
+            toggle.addEventListener("click", function () {
+                if(document.body.classList.contains("mobile-nav-active")) {
+                    languages.querySelector("summary").focus();
+                }
+            });
+            document.addEventListener("click", function (event) {
+                if(!languages.contains(event.target)) languages.open=false;
+            });
+            menu.addEventListener("keydown", function (event) {
+                if(event.key==="Tab"&&document.body.classList.contains("mobile-nav-active")) {
+                    const controls=[...menu.querySelectorAll("a, summary, button")].filter(function (element) {
+                        return element.getClientRects().length>0;
+                    });
+                    const first=controls[0];
+                    const last=controls[controls.length-1];
+                    if(event.shiftKey&&document.activeElement===first) {
+                        event.preventDefault();
+                        last.focus();
+                    } else if(!event.shiftKey&&document.activeElement===last) {
+                        event.preventDefault();
+                        first.focus();
+                    }
+                }
+                if(event.key!=="Escape") return;
+                if(languages.open) {
+                    languages.open=false;
+                    languages.querySelector("summary").focus();
+                } else if(document.body.classList.contains("mobile-nav-active")) {
+                    toggle.click();
+                    toggle.focus();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>

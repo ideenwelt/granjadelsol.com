@@ -213,6 +213,87 @@
     color: #27485f;
 }
 
+/* Offer context and language navigation: enabled only on the local prototype. */
+.use-case-hero-with-context {
+    padding: 40px 0;
+}
+
+.use-case-hero-context {
+    max-width: 760px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.use-case-hero-context p {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.use-case-hero-context a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.use-case-hero-context a:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+.use-case-menu .language-switch > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 12px 15px;
+    color: #5c768d;
+    font-size: 14px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.use-case-menu .language-switch > summary::-webkit-details-marker {
+    display: none;
+}
+
+.use-case-menu .language-switch > summary > i {
+    font-size: 12px;
+}
+
+.use-case-menu .language-switch[open] > ul {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+}
+
+.use-case-menu .language-switch a[aria-current="page"] {
+    color: #1c5c93;
+    font-weight: 700;
+}
+
+.use-case-menu .mobile-nav-toggle {
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.use-case-menu :is(a, summary, button):focus-visible {
+    outline: 2px solid #1c5c93;
+    outline-offset: 3px;
+}
+
+@media (max-width: 991px) {
+    .use-case-menu .language-switch > summary {
+        padding: 10px 20px;
+        color: #103453;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
 .use-case-cta {
     padding: 64px 0;
     background: #5c768d;
