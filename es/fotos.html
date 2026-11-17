@@ -76,15 +76,15 @@
                             <li><a class="gallery-language-link" href="../pt/fotos.html">Português</a></li>
                         </ul>
                     </li>
-                    <li><a href="index.html#header">Inicio</a></li>
+                    <li><a href="./#header">Inicio</a></li>
                     <li class="dropdown">
                         <a href="#"><span>Detalles de la propiedad</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a href="index.html#location">Ubicación</a></li>
-                            <li><a href="index.html#property">Terreno</a></li>
-                            <li><a href="index.html#house">Casa</a></li>
-                            <li><a href="index.html#services">Más detalles</a></li>
+                            <li><a href="./#location">Ubicación</a></li>
+                            <li><a href="./#property">Terreno</a></li>
+                            <li><a href="./#house">Casa</a></li>
+                            <li><a href="./#services">Más detalles</a></li>
                         </ul>
                     </li>
                     <li class="dropdown active">
@@ -98,8 +98,8 @@
                             <li><a href="fotos.html?bereich=haus">Casa</a></li>
                         </ul>
                     </li>
-                    <li><a href="index.html#faq">Preguntas frecuentes</a></li>
-                    <li><a href="index.html#price">Precio</a></li>
+                    <li><a href="./#faq">Preguntas frecuentes</a></li>
+                    <li><a href="./#price">Precio</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
                 <i aria-label="Abrir navegación" class="mobile-nav-toggle d-lg-none bi bi-list"></i>
@@ -633,7 +633,7 @@
                     </p>
                 </div>
                 <div class="text-center">
-                    <a class="btn btn-outline-primary px-4 py-2 rounded-pill" href="index.html#contact">
+                    <a class="btn btn-outline-primary px-4 py-2 rounded-pill" href="./#contact">
                         Ir al formulario de contacto
                         <i class="bi bi-arrow-right-short ms-1"></i>
                     </a>
@@ -695,9 +695,9 @@
 
             window.galleryBack=function () {
                 const fallback=
-                    area==="haus"? "index.html#house":
-                        area==="grundstueck"? "index.html#property":
-                            "index.html";
+                    area==="haus"? "./#house":
+                        area==="grundstueck"? "./#property":
+                            "./";
 
                 try {
                     if(document.referrer) {

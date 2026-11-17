@@ -83,14 +83,14 @@
                             <li><a class="gallery-language-link" href="../pt/fotos.html">Portugu&ecirc;s</a></li>
                         </ul>
                     </li>
-                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="./#header">Home</a></li>
                     <li class="dropdown">
                         <a href="#"><span>Objekt-Details</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a href="index.html#location">Lage</a></li>
-                            <li><a href="index.html#property">Grundstück</a></li>
-                            <li><a href="index.html#house">Haus</a></li>
-                            <li><a href="index.html#services">Weitere Details</a></li>
+                            <li><a href="./#location">Lage</a></li>
+                            <li><a href="./#property">Grundstück</a></li>
+                            <li><a href="./#house">Haus</a></li>
+                            <li><a href="./#services">Weitere Details</a></li>
                         </ul>
                     </li>
                     <li class="dropdown active">
@@ -104,8 +104,8 @@
                             <li><a href="fotos.html?bereich=haus">Haus</a></li>
                         </ul>
                     </li>
-                    <li><a href="index.html#faq">FAQ</a></li>
-                    <li><a href="index.html#price">Preis</a></li>
+                    <li><a href="./#faq">FAQ</a></li>
+                    <li><a href="./#price">Preis</a></li>
                     <li><a href="#contact">Kontakt</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-lg-none bi bi-list" aria-label="Navigation öffnen"></i>
@@ -696,7 +696,7 @@
                 </div>
 
                 <div class="text-center">
-                    <a href="index.html#contact" class="btn btn-outline-primary px-4 py-2 rounded-pill">
+                    <a href="./#contact" class="btn btn-outline-primary px-4 py-2 rounded-pill">
                         Zum Kontaktformular
                         <i class="bi bi-arrow-right-short ms-1"></i>
                     </a>
@@ -763,9 +763,9 @@
 
             window.galleryBack=function () {
                 const fallback=
-                    area==="haus"? "index.html#house":
-                        area==="grundstueck"? "index.html#property":
-                            "index.html";
+                    area==="haus"? "./#house":
+                        area==="grundstueck"? "./#property":
+                            "./";
 
                 try {
                     if(document.referrer) {

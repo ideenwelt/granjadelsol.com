@@ -20,13 +20,20 @@
 
     <link rel="canonical" href="https://granjadelsol.com/" />
     <link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/" />
-    <link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/" />
+    <link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/" />
     <link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/" />
-    <link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/" />
-    <link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/" />
+    <link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/" />
 
+    <!-- Hide the static fallback before first paint when JavaScript is enabled. -->
+    <style>
+        #language-fallback { display: none; }
+    </style>
     <noscript>
-        <meta http-equiv="refresh" content="0; url=en/">
+        <style>
+            #language-fallback { display: block; }
+            body { font-family: system-ui, sans-serif; line-height: 1.5; margin: 2rem; }
+        </style>
     </noscript>
     <meta name="robots" content="noindex,follow">
     <script>
@@ -66,6 +73,19 @@
         data-website-id="4964bf27-c2f3-4cb7-9a11-6171bdb02b49"></script>
 </head>
 
-<body></body>
+<body>
+    <main id="language-fallback">
+        <h1>Granja del Sol</h1>
+        <p>Continue in English or choose another language:</p>
+        <nav aria-label="Languages">
+            <ul>
+                <li><a href="en/" lang="en-US" hreflang="en-US" data-lang="en">English</a></li>
+                <li><a href="de/" lang="de" hreflang="de" data-lang="de">Deutsch</a></li>
+                <li><a href="es/" lang="es" hreflang="es" data-lang="es">Español</a></li>
+                <li><a href="pt/" lang="pt-BR" hreflang="pt-BR" data-lang="pt">Português</a></li>
+            </ul>
+        </nav>
+    </main>
+</body>
 
 </html>
